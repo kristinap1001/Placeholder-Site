@@ -1,0 +1,140 @@
+:root {
+  --orange: #bf4b19;
+  --green: #25301d;
+  --black: #220600;
+  --yellow: #fea634;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.background {
+  width:100%;
+  height:100%;
+  background-image: url("images/desk-wip-blur.png");
+  background-size: cover;
+  background-position: center center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-container {
+    height: 500px;
+    width: 600px;
+    max-width: 100vw;
+    max-height: 100vh;
+    background-image: url("images/Group\ 2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+    transform: rotate(2deg);
+
+    transform-origin: top center;
+    transition-property: transform;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.sign-contents {
+  font-size: 16;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 10em 5em 5em 5em;
+}
+
+h1 {
+  font-family: "Yesteryear", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--orange);
+  font-size: 7em;
+  transform: rotate(-14deg);
+  margin-bottom: -9%;
+}
+
+h2 {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  color: var(--green);
+  font-size: 2.5em;
+  margin-bottom: 3%;
+}
+
+h2.small {
+  font-size: 2em;
+  margin-bottom: -2%;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  font-size: 1.25em;
+  color: var(--orange);
+}
+
+p {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--black);
+  font-size: 1.25em;
+}
+
+a {
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--orange);
+  text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@media (hover: hover) {
+  a:hover {
+    color: var(--yellow);
+  }
+
+  .sign-container:hover {
+    transform: rotate(3deg);
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .sign-container {
+    width: 375px;
+  }
+  .sign-contents {
+    padding: 8.5em 2em 2em 2em;
+    font-size: 11px;
+  }
+  h1 {
+    margin-bottom: -7%;
+  }
+  h2 {
+    margin-bottom: 1%;
+  }
+  h2.small {
+    margin-bottom: -2%;
+  }
+}
